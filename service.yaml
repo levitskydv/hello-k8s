@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-k8s  # Service name
+spec:
+  type: NodePort           # Service type — NodePort
+  selector:
+    run: hello-k8s         # Selector to bind to port (shoudl match with pods labels kubectl get pods --show-labels)
+  ports:
+    - protocol: TCP
+      port: 80             # Service port
+      targetPort: 80       # Pod port
+      nodePort: 30080      # (Optional) Port for nodes (Node), range 30000-32767
