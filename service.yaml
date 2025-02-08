@@ -5,7 +5,7 @@ metadata:
 spec:
   type: NodePort           # Service type — NodePort
   selector:
-    run: hello-k8s         # Selector to bind to port (shoudl match with pods labels kubectl get pods --show-labels)
+    app: hello-k8s         # Selector to bind to port (shoudl match with pods labels kubectl get pods --show-labels)
   ports:
     - protocol: TCP
       port: 80             # Service port
