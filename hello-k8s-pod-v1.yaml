@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-k8s
+spec:
+  containers:
+  - name: hello-k8s
+    image: xerx697/hello-k8s:latest
+    ports:
+    - containerPort: 80
